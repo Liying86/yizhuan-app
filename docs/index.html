@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>易转 - 全能格式转换工具 | 图片 PDF 视频 文档一键转换</title>
+<meta name="description" content="易转是一款全能格式转换工具，支持图片、PDF、视频、文档等 200+ 格式一键转换，离线本地转换，隐私安全有保障。">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    color: #fff;
+    overflow-x: hidden;
+  }
+  .container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 60px 24px;
+    text-align: center;
+  }
+  .logo {
+    width: 96px;
+    height: 96px;
+    border-radius: 24px;
+    background: rgba(255,255,255,0.15);
+    backdrop-filter: blur(10px);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 48px;
+    margin-bottom: 24px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.15);
+  }
+  h1 {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 16px;
+    letter-spacing: -0.5px;
+  }
+  .subtitle {
+    font-size: 20px;
+    opacity: 0.9;
+    margin-bottom: 48px;
+    line-height: 1.6;
+  }
+  .download-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 18px 48px;
+    background: #fff;
+    color: #667eea;
+    font-size: 20px;
+    font-weight: 600;
+    border-radius: 16px;
+    text-decoration: none;
+    box-shadow: 0 12px 40px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+    margin-bottom: 16px;
+  }
+  .download-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 16px 48px rgba(0,0,0,0.25);
+  }
+  .download-btn:active {
+    transform: translateY(0);
+  }
+  .download-icon {
+    width: 28px;
+    height: 28px;
+  }
+  .version-info {
+    font-size: 14px;
+    opacity: 0.8;
+    margin-bottom: 56px;
+  }
+  .features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 24px;
+    margin-bottom: 64px;
+  }
+  .feature {
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 16px;
+    padding: 28px 20px;
+    text-align: center;
+    transition: all 0.3s ease;
+  }
+  .feature:hover {
+    background: rgba(255,255,255,0.15);
+    transform: translateY(-4px);
+  }
+  .feature-icon {
+    font-size: 36px;
+    margin-bottom: 12px;
+  }
+  .feature-title {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+  .feature-desc {
+    font-size: 13px;
+    opacity: 0.8;
+    line-height: 1.5;
+  }
+  .formats {
+    background: rgba(255,255,255,0.08);
+    border-radius: 16px;
+    padding: 32px;
+    margin-bottom: 48px;
+  }
+  .formats-title {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 20px;
+  }
+  .format-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+  }
+  .format-tag {
+    padding: 6px 16px;
+    background: rgba(255,255,255,0.15);
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 500;
+  }
+  .footer {
+    font-size: 13px;
+    opacity: 0.6;
+    padding-top: 32px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+  }
+  .footer a {
+    color: #fff;
+    text-decoration: underline;
+    opacity: 0.8;
+  }
+  @media (max-width: 640px) {
+    h1 { font-size: 32px; }
+    .subtitle { font-size: 16px; }
+    .download-btn { padding: 16px 36px; font-size: 18px; }
+    .container { padding: 40px 20px; }
+    .features { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+    .feature { padding: 20px 16px; }
+  }
+</style>
+</head>
+<body>
+  <div class="container">
+    <div class="logo">🔄</div>
+    <h1>易转</h1>
+    <p class="subtitle">全能格式转换工具<br>图片 · PDF · 视频 · 文档，一键搞定</p>
+
+    <a href="https://github.com/Liying86/yizhuan-app/releases/download/v0.10.0/YiZhuan-Setup-0.10.0.exe" class="download-btn" id="downloadBtn">
+      <svg class="download-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+        <polyline points="7 10 12 15 17 10"/>
+        <line x1="12" y1="15" x2="12" y2="3"/>
+      </svg>
+      立即下载 Windows 版
+    </a>
+    <div class="version-info">v0.10.0 · 约 183 MB · 支持 Windows 10/11</div>
+
+    <div class="features">
+      <div class="feature">
+        <div class="feature-icon">🖼️</div>
+        <div class="feature-title">图片转换</div>
+        <div class="feature-desc">JPG/PNG/WebP/HEIC<br>GIF/ICO 等 50+ 格式</div>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">📄</div>
+        <div class="feature-title">PDF 处理</div>
+        <div class="feature-desc">PDF 转图片/Word<br>合并拆分 压缩加密</div>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">🎬</div>
+        <div class="feature-title">视频转换</div>
+        <div class="feature-desc">MP4/MOV/AVI/MKV<br>GIF 动图转换</div>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">🔒</div>
+        <div class="feature-title">本地转换</div>
+        <div class="feature-desc">所有转换离线完成<br>隐私安全有保障</div>
+      </div>
+    </div>
+
+    <div class="formats">
+      <div class="formats-title">支持 200+ 格式</div>
+      <div class="format-tags">
+        <span class="format-tag">JPG</span>
+        <span class="format-tag">PNG</span>
+        <span class="format-tag">WebP</span>
+        <span class="format-tag">HEIC</span>
+        <span class="format-tag">GIF</span>
+        <span class="format-tag">BMP</span>
+        <span class="format-tag">ICO</span>
+        <span class="format-tag">SVG</span>
+        <span class="format-tag">PDF</span>
+        <span class="format-tag">Word</span>
+        <span class="format-tag">Excel</span>
+        <span class="format-tag">PPT</span>
+        <span class="format-tag">TXT</span>
+        <span class="format-tag">MP4</span>
+        <span class="format-tag">MOV</span>
+        <span class="format-tag">AVI</span>
+        <span class="format-tag">MKV</span>
+        <span class="format-tag">MP3</span>
+        <span class="format-tag">WAV</span>
+        <span class="format-tag">CAJ</span>
+      </div>
+    </div>
+
+    <div class="footer">
+      © 2024 易转 · <a href="https://github.com/Liying86/yizhuan-app/releases" target="_blank">历史版本</a>
+    </div>
+  </div>
+
+<script>
+  // 显示最新版本号
+  fetch('https://api.github.com/repos/Liying86/yizhuan-app/releases/latest')
+    .then(r => r.json())
+    .then(data => {
+      if (data && data.tag_name) {
+        const ver = data.tag_name.replace('v', '');
+        const info = document.querySelector('.version-info');
+        const btn = document.getElementById('downloadBtn');
+        const asset = data.assets?.find(a => a.name.endsWith('.exe'));
+        if (asset) {
+          info.textContent = `v${ver} · 约 ${Math.round(asset.size / 1024 / 1024)} MB · 支持 Windows 10/11`;
+          btn.href = asset.browser_download_url;
+        }
+      }
+    })
+    .catch(() => {});
+</script>
+</body>
+</html>
