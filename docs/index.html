@@ -133,6 +133,58 @@
     font-size: 13px;
     font-weight: 500;
   }
+  .install-tip {
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 16px;
+    padding: 24px 28px;
+    margin-bottom: 56px;
+    text-align: left;
+  }
+  .install-tip-title {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .install-tip-title .icon {
+    font-size: 20px;
+  }
+  .install-steps {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .install-steps li {
+    font-size: 14px;
+    opacity: 0.9;
+    line-height: 1.7;
+    padding-left: 24px;
+    position: relative;
+  }
+  .install-steps li::before {
+    content: attr(data-step);
+    position: absolute;
+    left: 0;
+    top: 2px;
+    width: 18px;
+    height: 18px;
+    background: rgba(255,255,255,0.25);
+    border-radius: 50%;
+    font-size: 12px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+  }
+  .install-steps li strong {
+    color: #ffd700;
+    font-weight: 600;
+  }
   .footer {
     font-size: 13px;
     opacity: 0.6;
@@ -168,7 +220,17 @@
       </svg>
       立即下载 Windows 版
     </a>
-    <div class="version-info">v0.10.0 · 约 183 MB · 支持 Windows 10/11</div>
+    <div class="version-info" id="versionInfo">v0.10.0 · 约 183 MB · 支持 Windows 10/11</div>
+
+    <div class="install-tip">
+      <div class="install-tip-title"><span class="icon">💡</span> 安装提示</div>
+      <ul class="install-steps">
+        <li data-step="1">下载完成后双击安装包运行</li>
+        <li data-step="2">如弹出"Windows 已保护你的电脑"，请点击 <strong>更多信息</strong></li>
+        <li data-step="3">然后点击 <strong>仍要运行</strong> 即可开始安装</li>
+        <li data-step="4">软件不含任何恶意代码，请放心使用</li>
+      </ul>
+    </div>
 
     <div class="features">
       <div class="feature">
