@@ -1,0 +1,149 @@
+{
+  "name": "yizhuan-app",
+  "private": true,
+  "version": "0.10.0",
+  "description": "易转 - 简单高效的办公格式转换工具",
+  "author": "YiZhuan",
+  "type": "module",
+  "main": "dist-electron/main/index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc --noEmit && vite build && electron-builder",
+    "build:win": "vue-tsc --noEmit && vite build && electron-builder --win",
+    "build:dir": "vue-tsc --noEmit && vite build && electron-builder --dir",
+    "release": "vue-tsc --noEmit && vite build && electron-builder --win --publish always",
+    "release:draft": "vue-tsc --noEmit && vite build && electron-builder --win --publish onTagOrDraft",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@pdf-lib/fontkit": "^1.1.1",
+    "adm-zip": "^0.6.0",
+    "ffmpeg-static": "^5.3.0",
+    "heic-convert": "^2.1.0",
+    "marked": "^18.0.7",
+    "pdf-lib": "^1.17.1",
+    "pdfjs-dist": "^6.1.200",
+    "sharp": "^0.35.3",
+    "tesseract.js": "^7.0.0",
+    "vue": "^3.5.40"
+  },
+  "devDependencies": {
+    "@types/node": "^26.1.1",
+    "@vitejs/plugin-vue": "^5.2.4",
+    "electron": "^43.2.0",
+    "electron-builder": "^26.15.3",
+    "esbuild": "^0.28.1",
+    "typescript": "~6.0.2",
+    "vite": "^7.3.7",
+    "vite-plugin-electron": "^1.1.0",
+    "vite-plugin-electron-renderer": "^1.0.0",
+    "vue-tsc": "^3.3.8"
+  },
+  "build": {
+    "appId": "com.yizhuan.app",
+    "productName": "易转",
+    "copyright": "Copyright © 2026 YiZhuan",
+    "compression": "normal",
+    "directories": {
+      "output": "release-new",
+      "buildResources": "build"
+    },
+    "files": [
+      "dist",
+      "dist-electron",
+      "node_modules/tesseract.js/**/*",
+      "node_modules/tesseract.js-core/**/*",
+      "node_modules/regenerator-runtime/**/*",
+      "node_modules/node-fetch/**/*",
+      "node_modules/sharp/**/*",
+      "node_modules/@img/**/*",
+      "node_modules/heic-convert/**/*",
+      "node_modules/libheif-js/**/*",
+      "node_modules/heic-decode/**/*",
+      "node_modules/ffmpeg-static/**/*",
+      "node_modules/pdf-lib/**/*",
+      "node_modules/@pdf-lib/**/*",
+      "node_modules/tslib/**/*",
+      "node_modules/marked/**/*",
+      "node_modules/idb-keyval/**/*",
+      "node_modules/wasm-feature-detect/**/*"
+    ],
+    "asarUnpack": [
+      "node_modules/sharp/**/*",
+      "node_modules/@img/**/*",
+      "node_modules/tesseract.js/**/*",
+      "node_modules/tesseract.js-core/**/*",
+      "node_modules/ffmpeg-static/**/*"
+    ],
+    "extraResources": [
+      {
+        "from": "python",
+        "to": "python"
+      },
+      {
+        "from": "build/caj-tools/mutool.exe",
+        "to": "caj-tools/mutool.exe"
+      },
+      {
+        "from": "build/caj-tools/caj2pdf-src",
+        "to": "caj-tools/caj2pdf-src"
+      },
+      {
+        "from": "build/icon.ico",
+        "to": "icon.ico"
+      },
+      {
+        "from": "build/watermark",
+        "to": "watermark"
+      }
+    ],
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64"
+          ]
+        }
+      ],
+      "icon": "build/icon.ico",
+      "artifactName": "YiZhuan-Setup-${version}.${ext}",
+      "signAndEditExecutable": false,
+      "fileAssociations": [
+        {
+          "ext": "caj",
+          "name": "CAJ File",
+          "description": "CAJ 文件"
+        },
+        {
+          "ext": "nh",
+          "name": "NH File",
+          "description": "NH 文件"
+        }
+      ]
+    },
+    "nsis": {
+      "oneClick": true,
+      "perMachine": false,
+      "allowElevation": true,
+      "installerIcon": "build/icon.ico",
+      "uninstallerIcon": "build/icon.ico",
+      "installerHeaderIcon": "build/icon.ico",
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "易转",
+      "deleteAppDataOnUninstall": false,
+      "runAfterFinish": true
+    },
+    "npmRebuild": false,
+    "publish": {
+      "provider": "github",
+      "owner": "Liying86",
+      "repo": "yizhuan-app",
+      "releaseType": "release"
+    }
+  },
+  "optionalDependencies": {
+    "@rolldown/binding-win32-x64-msvc": "^1.2.13"
+  }
+}

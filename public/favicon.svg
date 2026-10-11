@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256">
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4f46e5"/>
+      <stop offset="100%" style="stop-color:#06b6d4"/>
+    </linearGradient>
+  </defs>
+  <rect width="256" height="256" rx="56" fill="white"/>
+  <g transform="translate(128, 128)">
+    <!-- 上箭头：从左到右 -->
+    <path d="M -55 -20 Q -55 -50 -25 -50 L 25 -50 Q 55 -50 55 -20" 
+          fill="none" stroke="url(#grad)" stroke-width="16" stroke-linecap="round"/>
+    <path d="M 45 -55 L 65 -20 L 50 -15 Z" fill="url(#grad)"/>
+    <!-- 下箭头：从右到左 -->
+    <path d="M 55 20 Q 55 50 25 50 L -25 50 Q -55 50 -55 20" 
+          fill="none" stroke="url(#grad)" stroke-width="16" stroke-linecap="round"/>
+    <path d="M -45 55 L -65 20 L -50 15 Z" fill="url(#grad)"/>
+  </g>
+</svg>

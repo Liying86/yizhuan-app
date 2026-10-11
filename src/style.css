@@ -1,0 +1,104 @@
+:root {
+  --primary: #4f46e5;
+  --primary-light: #6366f1;
+  --primary-bg: rgba(79, 70, 229, 0.08);
+  --accent: #7c5cf2;
+  --accent-light: #9381ff;
+  --accent-bg: rgba(124, 92, 242, 0.08);
+  --secondary: #06b6d4;
+  --success: #10b981;
+  --success-light: #34d399;
+  --success-bg: rgba(16, 185, 129, 0.08);
+  --warning: #f59e0b;
+  --warning-light: #fbbf24;
+  --danger: #ef4444;
+  --danger-light: #f87171;
+  --danger-bg: rgba(239, 68, 68, 0.08);
+  --bg: #f8fafc;
+  --surface: #ffffff;
+  --sidebar-bg: #f1f5f9;
+  --ink: #1e293b;
+  --muted: #64748b;
+  --border: #e2e8f0;
+  --shadow: 0 1px 3px rgba(0,0,0,0.08), 0 1px 2px rgba(0,0,0,0.04);
+  --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.08), 0 4px 6px -2px rgba(0,0,0,0.04);
+  --radius: 12px;
+  --radius-sm: 8px;
+  --scrollbar-thumb: #cbd5e1;
+  --scrollbar-thumb-hover: #94a3b8;
+  --warning-text: #92400e;
+  --warning-bg: rgba(245, 158, 11, 0.08);
+  --warning-border: rgba(245, 158, 11, 0.3);
+  --hover-overlay: rgba(0, 0, 0, 0.06);
+}
+
+[data-theme="dark"] {
+  --primary: #818cf8;
+  --primary-light: #a5b4fc;
+  --primary-bg: rgba(129, 140, 248, 0.12);
+  --accent: #9381ff;
+  --accent-light: #a78bfa;
+  --accent-bg: rgba(147, 129, 255, 0.12);
+  --secondary: #22d3ee;
+  --success: #34d399;
+  --success-light: #6ee7b7;
+  --success-bg: rgba(52, 211, 153, 0.12);
+  --warning: #fbbf24;
+  --warning-light: #fcd34d;
+  --danger: #f87171;
+  --danger-light: #fca5a5;
+  --danger-bg: rgba(248, 113, 113, 0.12);
+  --bg: #0f172a;
+  --surface: #1e293b;
+  --sidebar-bg: #0f172a;
+  --ink: #f1f5f9;
+  --muted: #94a3b8;
+  --border: #334155;
+  --shadow: 0 1px 3px rgba(0,0,0,0.3), 0 1px 2px rgba(0,0,0,0.2);
+  --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.3), 0 4px 6px -2px rgba(0,0,0,0.2);
+  --scrollbar-thumb: #475569;
+  --scrollbar-thumb-hover: #64748b;
+  --warning-text: #fbbf24;
+  --warning-bg: rgba(251, 191, 36, 0.08);
+  --warning-border: rgba(251, 191, 36, 0.3);
+  --hover-overlay: rgba(255, 255, 255, 0.06);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, "PingFang SC", "Microsoft YaHei", "Segoe UI", Roboto, sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--ink);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+  overflow: hidden;
+}
+
+#app {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-thumb);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--scrollbar-thumb-hover);
+}

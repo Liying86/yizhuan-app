@@ -1,0 +1,38 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+dist-electron
+release
+release-*
+*.local
+
+# Build binaries
+build/caj-tools/*.exe
+build/caj-tools/*.zip
+build/ffmpeg/*.exe
+build/ffmpeg/*.dll
+build/sharp/
+build/tesseract/
+
+# Test files
+test-referral.mjs
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
