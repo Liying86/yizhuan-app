@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>易转 - 全能格式转换工具 | 图片 PDF 视频 文档一键转换</title>
-<meta name="description" content="易转是一款全能格式转换工具，支持图片、PDF、视频、文档等 200+ 格式一键转换，离线本地转换，隐私安全有保障。">
+<meta name="description" content="易转是一款纯净无广告的全能格式转换工具，支持图片、PDF、视频、CAJ、文档等200+格式批量转换，本地离线运行，文件无需上传云端，基础功能永久免费。">
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body {
@@ -74,7 +74,25 @@
   .version-info {
     font-size: 14px;
     opacity: 0.8;
-    margin-bottom: 56px;
+    margin-bottom: 24px;
+  }
+  .badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+    margin-bottom: 48px;
+  }
+  .badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 16px;
+    background: rgba(255,255,255,0.12);
+    border: 1px solid rgba(255,255,255,0.22);
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 500;
   }
   .features {
     display: grid;
@@ -108,6 +126,50 @@
     font-size: 13px;
     opacity: 0.8;
     line-height: 1.5;
+  }
+  .why-us {
+    margin-bottom: 64px;
+  }
+  .section-title {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 28px;
+  }
+  .why-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    text-align: left;
+  }
+  .why-card {
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 16px;
+    padding: 24px;
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+    transition: all 0.3s ease;
+  }
+  .why-card:hover {
+    background: rgba(255,255,255,0.15);
+    transform: translateY(-2px);
+  }
+  .why-icon {
+    font-size: 28px;
+    flex-shrink: 0;
+    line-height: 1.2;
+  }
+  .why-title {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 6px;
+  }
+  .why-desc {
+    font-size: 13px;
+    opacity: 0.85;
+    line-height: 1.6;
   }
   .formats {
     background: rgba(255,255,255,0.08);
@@ -222,6 +284,12 @@
     </a>
     <div class="version-info" id="versionInfo">v0.10.0 · 约 183 MB · 支持 Windows 10/11</div>
 
+    <div class="badges">
+      <span class="badge">🔒 本地离线转换</span>
+      <span class="badge">✨ 纯净无广告</span>
+      <span class="badge">🆓 基础功能免费</span>
+    </div>
+
     <div class="install-tip">
       <div class="install-tip-title"><span class="icon">💡</span> 安装提示</div>
       <ul class="install-steps">
@@ -255,6 +323,40 @@
       </div>
     </div>
 
+    <div class="why-us">
+      <div class="section-title">为什么选择易转</div>
+      <div class="why-grid">
+        <div class="why-card">
+          <div class="why-icon">🔒</div>
+          <div>
+            <div class="why-title">本地离线转换</div>
+            <div class="why-desc">文件全程在你自己电脑上处理，无需上传云端，断网也能用，杜绝隐私泄露风险</div>
+          </div>
+        </div>
+        <div class="why-card">
+          <div class="why-icon">⚡</div>
+          <div>
+            <div class="why-title">批量任务处理</div>
+            <div class="why-desc">几百个文件一次拖入，批量完成文档与媒体转换，高效省时不加班</div>
+          </div>
+        </div>
+        <div class="why-card">
+          <div class="why-icon">✨</div>
+          <div>
+            <div class="why-title">纯净无捆绑</div>
+            <div class="why-desc">无广告、无弹窗、无捆绑插件，安装即用，安静做好转换这一件事</div>
+          </div>
+        </div>
+        <div class="why-card">
+          <div class="why-icon">🆓</div>
+          <div>
+            <div class="why-title">基础功能免费</div>
+            <div class="why-desc">常用格式转换永久免费使用，不强制注册登录，下载即可开始使用</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div class="formats">
       <div class="formats-title">支持 200+ 格式</div>
       <div class="format-tags">
@@ -282,7 +384,7 @@
     </div>
 
     <div class="footer">
-      © 2024 易转 · <a href="https://github.com/Liying86/yizhuan-app/releases" target="_blank">历史版本</a>
+      © 2026 易转 · <a href="https://github.com/Liying86/yizhuan-app/releases" target="_blank">历史版本</a>
     </div>
   </div>
 
